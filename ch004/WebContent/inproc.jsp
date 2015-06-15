@@ -2,6 +2,12 @@ d<%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <%@ page import ="java.sql.*" %>
 <%
+// 파라미터값중에 한글이 포함되어있을때 전달과정에서 영문기반으로 변환하여
+// 전달되게 하였다.
+// 그래서 한글로 재복원을 시켜야 한다.
+request.setCharacterEncoding("euc-kr"); //한글복원
+//response.setCharacterEncoding("euc-kr");
+
 String id = request.getParameter("id");
 int kk = Integer.parseInt(request.getParameter("kor"));
 int ee = Integer.parseInt(request.getParameter("eng"));

@@ -15,7 +15,7 @@
 							"jdbc:oracle:thin:@192.168.10.1:1521:xe",
 							"jsp", "1111");
 			//2. 작업 준비 (명령문을 전달할수있는 형태로 만들어두기)
-			String sql = "select * from info order by id asc";
+			String sql = "select * from info order by nick asc";
 			PreparedStatement ps = conn.prepareStatement(sql);
 
 			//3. 작업 수행
